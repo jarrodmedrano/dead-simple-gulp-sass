@@ -1,0 +1,400 @@
+﻿/* -------------- Search Box -------------- */
+/* Search button/icon edge cap of input */
+.template-search .input-group-addon {
+    border-right: 0 !important;
+    border-left: 2px solid #ccc !important;
+}
+
+input[type='search'].form-control {
+    border-right: 2px solid #ccc;
+    border-left: 0px;
+}
+
+/* Sets active and hover states for border color */
+input[type="search"].pageSection-search:hover ~ .input-group-addon,
+input[type="search"].pageSection-search:active ~ .input-group-addon,
+input[type="search"].pageSection-search:focus ~ .input-group-addon,
+input[type="search"].pageSection-search:hover,
+input[type="search"].pageSection-search:active,
+input[type="search"].pageSection-search:focus {
+    border-color: #0078d7 !important;
+    border-left: 2px;
+}
+
+/* -------------- Footer -------------- */
+.shell-footer i.shell-icon-globe {
+    padding-right: 0;
+    padding-left: 10px;
+}
+
+/* -------------- Webcore Overrides/fixes -------------- */
+.table th .sortable:before {
+    display: none;
+}
+
+.table th .sortable:after {
+    margin-left: 0;
+    margin-right: 6px;
+}
+
+.progress-bar {
+    float: right;
+}
+
+.selection.control div input[type='radio'], .selection.control div input[type='checkbox'] {
+    margin-right: -28px;
+    margin-left: 0;
+}
+
+/* Modal button stacking fix, temporary until Bug #3211669 is fixed in WebCore */
+.modal .btn-group .btn {
+    margin-left: 0;
+}
+
+.modal .btn:last-child {
+    margin-right: 4px;
+}
+
+/* Design to confirm if single button floating left in group is intended or whether this is a webcore fix in which case this code should be removed  */
+.modal :only-child.btn {
+    float: right;
+}
+
+/* We can remove this once the site is using WebCore version 3.7.3 or above */
+.pagination li > a {
+    float: right;
+}
+
+.pagination li.previous-pagination a {
+    margin-left: 0;
+    margin-right: -12px;
+    padding: 8px 0 8px 12px;
+}
+
+.pagination li.next-pagination a {
+    margin-left: -12px;
+    margin-right: 0;
+    padding: 8px 12px 8px 0;
+}
+
+.pagination li.previous-pagination a span::after {
+    font-family: "Dev Center MDL2 Assets";
+    content: "\E76C";
+    padding-left: 4px;
+    padding-right: 0;
+    vertical-align: bottom;
+}
+
+.pagination li.next-pagination a span::before {
+    font-family: "Dev Center MDL2 Assets";
+    content: "\E76B";
+    padding-right: 4px;
+    padding-left: 0;
+    vertical-align: bottom;
+}
+
+.pagination li.previous-pagination a span::before {
+    display: none;
+}
+
+.pagination li.next-pagination a span::after {
+    display: none;
+}
+
+/*WebCore bug fix for wrong arrow direction bug# 3441428 */
+.pagination-sectional {
+    direction: ltr;
+}
+
+/* Temporary fix for WebCore Bug #5586414: pivots not mirrored */
+.nav-tabs > li {
+    float: right;
+}
+
+/* -------------- General fixes -------------------*/
+.header-status .status-icon {
+    float: right;
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+.header-action.header-action-inner {
+    padding-right: 0px;
+    padding-left: 35px;
+}
+
+/* Progress indicators next to buttons */
+.btn-group .progress-ring {
+    margin-left: 0;
+    margin-right: 16px;
+}
+
+/* Fix for Bug #3137672: remove 40px padding right */
+.bulleted-list {
+    padding-right: 0px;
+}
+
+ul.bulleted-list,
+.enforce-bulleted-list-indented ul {
+    margin-right: -24px;
+}
+
+ul.bulleted-list.bulleted-list-indented,
+.enforce-bulleted-list-indented ul {
+    margin-left: 0;
+    margin-right: 13px;
+}
+
+.bulleted-list-header {
+    margin-left: 0;
+    margin-right: -16px;
+}
+
+.bulleted-list-header.bulleted-list-indented-header {
+    margin-right: 0;
+}
+
+ol.ordered-list li {
+    margin: 8px -20px 8px 0;
+}
+
+.horizontal-link-group .horizontal-link:not(:first-child) {
+    padding-left: 0;
+    margin-left: 0;
+    border-left: none;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 2px solid #656565;
+}
+
+.horizontal-link-group .horizontal-link.hidden:first-child + .horizontal-link {
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+}
+
+/* Custom section headers */
+@media (min-width:540px) {
+	.section-header.has-controls .form-searchbox {
+		float: left;
+	}
+}
+
+/* Drop areas */
+body[dir="rtl"] div.dropArea {
+    float: right;
+}
+
+/* ------------------ Helpers ----------------- */
+.mixed-dir-lang {
+    display: inline-block;
+}
+
+.float-right {
+    float: left;
+}
+
+.float-left {
+    float: right;
+}
+
+.dir-ltr {
+    direction: ltr;
+}
+
+/* Fix for Bug#7089958 : applying .text-right to .table headers doesn't work */
+.text-right {
+    text-align: left !important;
+}
+
+/* ------------------ Alerts ------------------ */
+.alert .alert-icon {
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+/* -------------- General Forms -------------- */
+/* Inline input group spacing */
+.form-group-addon.form-group-addon-adjacent input:first-child,
+.form-group-addon.form-group-addon-adjacent select:first-child,
+.form-group-addon.form-group-addon-adjacent input:last-child,
+.form-group-addon.form-group-addon-adjacent select:last-child,
+.form-group-addon.form-group-addon-adjacent .form-group:first-child,
+.form-group-addon.form-group-addon-adjacent .form-group:last-child {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.control.selection div input[type='radio'],
+.control.selection div input[type='checkbox'] {
+    margin-right: -28px;
+    margin-left: 0;
+}
+
+.selection.control {
+    padding-right: 28px;
+    padding-left: 0;
+}
+
+div.selection div, div.selection label {
+    float: right;
+}
+
+.control.selection {
+    padding-right: 28px;
+    padding-left: 0;
+    float: right;
+}
+
+.checkbox label, .radio label {
+    margin-bottom: 0px;
+    padding-right: 28px;
+    padding-left: 0;
+}
+
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+    position: absolute;
+    margin-right: -28px;
+    margin-left: 0;
+}
+
+.selection.control + p {
+    clear: both;
+}
+
+.selection.control {
+    float: none;
+}
+
+.link-aside {
+    margin-right: 5px;
+    margin-left: 0px;
+}
+
+/* -------------- Specific page forms -------------- */
+/* Pricing */
+.market-input label.overflow-ellipsis {
+    padding-left: 8px;
+    padding-right: 0;
+}
+
+.market-input.multi .market-input-message,
+.market-input.multi .market-input-control {
+    padding-right: 8px;
+    padding-left: 0;
+}
+
+.market-input .market-input-message {
+    text-align: right;
+}
+
+.pseudo-label {
+    margin-right: 28px;
+    margin-left: 0;
+}
+
+.form-inline .month-calendar {
+    margin-left: 6px;
+    margin-right: 0;
+}
+
+/* App list */
+.media .media-left {
+    padding-left: 16px;
+    padding-right: 0;
+}
+
+/* Create app/name reservation  */
+.name-reservation {
+    float: right;
+}
+
+.has-details.form-group .detail-item {
+    float: right;
+}
+
+/* Description Page */
+body[dir="rtl"] .listing-image-container li:nth-child(3n+1) {
+    padding-right: 0;
+    padding-left: 6px;
+}
+
+body[dir="rtl"] .listing-image-container .icon-toolbar,
+body[dir="rtl"] .promotional-images .imageOptions {
+    float: left;
+}
+
+body[dir="rtl"] .listing-image-container .delete-icon,
+body[dir="rtl"] .listing-image-container .magnify-icon {
+    float: right;
+}
+
+body[dir="rtl"] .listing-image-container .delete-icon {
+    margin-right: 10px;
+}
+
+body[dir="rtl"] .listing-image-container .magnify-icon {
+    margin-right: 0;
+}
+
+body[dir="rtl"] .sortable li,
+body[dir="rtl"] .promotional-images .listing-image-container {
+    float: right;
+}
+
+body[dir="rtl"] .promotional-images .row .row .listing-image-container:nth-child(3n+1) {
+    padding-left: 6px;
+    padding-right: 0px;
+}
+
+body[dir="rtl"] .promotional-images .row .row .listing-image-container:nth-child(3n+3) {
+    padding-left: 0px;
+    padding-right: 6px;
+}
+
+body[dir="rtl"] div:not(.promotional-images) .listing-image-container .add-icon {
+    -ms-transform: translate(50%,-50%);
+    -webkit-transform: translate(50%,-50%);
+    transform: translate(50%,-50%);
+    top: 50%;
+    left: 0;
+    right: 50%;
+}
+
+/* Cert status */
+.cert-progress .label-split .label-4 {
+    text-align: left;
+}
+
+/* Packages  */
+.package-size {
+    margin-left: 0;
+    margin-right: 16px;
+}
+
+body[dir="rtl"] .packages-table .package-table table.package-header .package-name {
+    padding-right: 0px;
+    padding-left: 10px;
+}
+
+body[dir="rtl"] .progress-bar-container.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* App Properties */
+body[dir="rtl"] .iarcresponselabel {
+    margin-right: 25px;
+    margin-left: 20px;
+}
+
+body[dir="rtl"] .iarc-questions .first-level-child .radio {
+    margin-right: 40px;
+}
+
+body[dir="rtl"] .iarc-questions .first-level-child .radio:nth-of-type(1) {
+    margin-right: 0;
+}

@@ -1,0 +1,1684 @@
+/* -------------------Text ------------------- */
+
+/* TO DO .win-color-fg-secondary WebCore class should replace .text-base-mid-light site-wide */
+.text-base-mid-light {
+    color: #656565;
+}
+
+a {
+    cursor: pointer;
+}
+
+.color-green {
+    color: green;
+}
+
+div:focus,
+span:focus {
+    outline: 1px;
+}
+
+/* Icons */
+.checkmark-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.checkmark-icon:after {
+    content: '\E73E';
+    font-family: 'DevCenter Icon';
+    color: #008A17;
+    font-size: 32px;
+}
+
+/* Alerts */
+.alert.has-icon .alert-string {
+    color: #000000;
+}
+
+.alert.alert-warning {
+    color: #ffb900;
+}
+
+.alert.has-icon {
+    display: table;
+}
+
+.alert .alert-icon,
+.alert .alert-string {
+    display: table-cell;
+}
+
+.alert .alert-icon {
+    padding-right: 5px;
+}
+
+.alert:not(.has-icon) a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Used for spans with js attached that look like links */
+.link {
+    color:#006cd8;
+    cursor: pointer;
+}
+
+.link:hover {
+    color:#666;
+}
+
+.link-aside {
+    margin-left: 5px !important;
+}
+
+.horizontal-link-group .horizontal-link {
+    display: inline;
+}
+
+.horizontal-link-group .horizontal-link:not(:first-child) {
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 2px solid #656565;
+}
+
+.horizontal-link-group .horizontal-link.hidden:first-child + .horizontal-link {
+    padding-left: 0;
+    margin-left: 0;
+    border-left: none;
+}
+
+.indented-row {
+    padding: 0 30px;
+}
+
+/* Used for buttons that look like links */
+button.link {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    position: static;
+    min-width: auto;
+    outline: none;
+    background: none !important;
+    vertical-align: baseline;
+    overflow: auto;
+    white-space: auto;
+}
+
+/* Temporary hacks to restore outline for specific browsers */
+/* Webkit latest */
+button.link:focus,
+.focusable:focus {
+    outline: auto 5px -webkit-focus-ring-color;
+    outline-style: auto;
+}
+/* IE/Firefox latest */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    button.link:focus,
+    .focusable:focus {
+        outline: black dotted thin;
+    }
+}
+
+button.link.disabled,
+button.link[disabled] {
+    cursor: not-allowed !important;
+    pointer-events: auto;
+}
+
+ul.bulleted-list,
+.enforce-bulleted-list-indented ul {
+    list-style-type: disc; 
+    margin: 0;
+}
+
+ul.bulleted-list li,
+.enforce-bulleted-list-indented ul li {
+    margin: 0;
+}
+
+ul.bulleted-list.bulleted-list-indented,
+.enforce-bulleted-list-indented ul {
+    margin-left: 13px;
+}
+
+.bulleted-list-header {
+    margin-left: -16px;
+}
+
+.bulleted-list-header.bulleted-list-indented-header {
+    margin-left: 0;
+}
+
+ol.ordered-list {
+    margin: 0;
+}
+
+ol.ordered-list li {
+    margin: 8px 0 8px -20px;
+}
+
+.reduced-string-length {
+    max-width: 66%;
+}
+
+/* ------------------- WebCore Overrides/Fixes ------------------- */
+.all-apps-section .header-action {
+    vertical-align: bottom;
+}
+
+.section .header-action {
+    font-size: 15px;
+    font-size: 0.93rem;
+}
+
+.cert-status-table .page-bottom-buttons {
+    margin-top: 48px;
+}
+
+/* Links without href stay blue instead of grey */
+a {
+    color: #006cd8;
+}
+
+/* Fix for WebCore Bug#7088285: header clipping with .dashboard and .text-maxlines ; */
+.dashboard .page-title-header .page-title.text-maxlines-1,
+.dashboard .section .section-title.text-maxlines-1 {
+    line-height: normal;
+}
+
+/* Spacing between item sections in a section */
+.section .item-section {
+    margin-right: 20px;
+}
+
+/* Override WebCore black table headers to grey ones */
+.table th {
+    color: #656565;
+}
+
+/* Temporary fix for WebCore Bug#5561734 */
+.table .sortable.active:after {
+    content: "\E70E";
+}
+
+.table .sortable.active.descending:after {
+    content: "\E70D";
+}
+
+.table .sortable.active.ascending:after {
+    content: "\E70E";
+}
+
+/* Prevent sortable table header links from turning blue */
+.table a.sortable,
+.table .sortable a {
+    color: inherit;
+}
+
+/* Prevents too much margin between sections with item sections, WebCore bug fix */
+.section.has-item-sections {
+    margin-bottom: 10px;
+}
+
+/* Fix for Bug #3137672: remove 40px padding left */
+.bulleted-list {
+    padding-left: 0px;
+}
+
+/* Fix for Bug#7089958 : applying .text-right to .table headers doesn't work */
+.text-right {
+    text-align: right !important;
+}
+
+/* Case-specific fix for Bug #5484772: prevent hidden content when modal height exceeds window height */
+@media (max-width: 769px) {
+    .modal.center-top-md .modal-dialog {
+        transform: none;
+        margin: 0 auto;
+    }
+}
+
+/* Fix for Bug #5586414: too much vertical space when Pivots stack */
+.nav.nav-tabs {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.nav.nav-tabs li a {
+    height: auto;
+    line-height: 0;
+    display: inline-block;
+}
+
+/* Fix for Bug #5482137: changing value back to 32px */
+.spacer-32-top {
+    margin-top: 32px !important;
+}
+
+/* Override too much space between header text and content when there is no header rule */
+.section.remove-header-rule .section-header {
+    margin-bottom: 10px;
+}
+
+/* Override button min-width in header */
+.section-header .btn.btn-primary {
+    min-width: 160px;
+}
+
+/* Override extra padding being added to media items in tables (to maintain 16px padding look) */
+.table .media-icon {
+    margin-top: 0px;
+}
+
+/* Make tables with media items in them work with table-responsive */
+.table-responsive .media .body-inner {
+    table-layout: auto;
+}
+
+/* Correct radio input location when inputs (like dropdowns) are in the radio label */
+.radio.has-inputs input[type="radio"],
+.radio.has-inputs label span::before {
+    top: 5px;
+}
+
+.radio.has-inputs label span:nth-of-type(n+2)::before {
+    display: none;
+}
+
+.form-group.form-group-tall {
+    margin-bottom: 20px;
+}
+
+/* Pagination */
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.pagination > li {
+    display: inline;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    position: relative;
+    float: left;
+    line-height: 1.428571429;
+    text-decoration: none;
+    background-color: #fff;
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+    margin-left: 0;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+    z-index: 2;
+    color: #fff;
+    border-color: #428bca;
+    cursor: default;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+    background-color: #fff;
+    cursor: none;
+}
+
+.pagination li > a,
+.pagination li > span {
+    color: #000;
+    background-color: #fff;
+    margin: 2px;
+    height: 40px;
+    min-width: 40px;
+    padding: 8px 12px;
+    text-align: center;
+    font-weight: 600;
+}
+.pagination li a:hover {
+    color: #006ECC;
+    background-color: #F2F2F2;
+}
+
+.pagination li a:focus,
+.pagination li a:active {
+    color: #fff;
+    background-color: #656565;
+    font-weight: 400;
+}
+
+.pagination li.previous-pagination a {
+    padding: 8px 12px 8px 0;
+}
+
+.pagination li.previous-pagination a span::before {
+    content: '\E76B';
+    font-family: 'DevCenter Icon';
+    color: #000;
+    font-weight: 600;
+    font-size: 12px;
+    padding-right: 4px;
+    vertical-align: bottom;
+}
+
+.pagination li.next-pagination a {
+    padding-right: 8px;
+}
+
+.pagination li.next-pagination a span::after {
+    content: '\E76C';
+    font-family: 'DevCenter Icon';
+    color: #000;
+    padding-left: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    vertical-align: bottom;
+}
+
+.pagination li.next-pagination a:hover,
+.pagination li.next-pagination a:hover span,
+.pagination li.next-pagination a:focus,
+.pagination li.next-pagination a:active,
+.pagination li.previous-pagination a:hover,
+.pagination li.previous-pagination a:hover span,
+.pagination li.previous-pagination a:focus,
+.pagination li.previous-pagination a:active {
+    color: #006ECC;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.pagination li.next-pagination a span:active,
+.pagination li.next-pagination a span:focus,
+.pagination li.next-pagination a:hover span::after,
+.pagination li.next-pagination a:focus span::after,
+.pagination li.next-pagination a:active span::after,
+.pagination li.previous-pagination a span:active,
+.pagination li.previous-pagination a span:focus,
+.pagination li.previous-pagination a:hover span::before,
+.pagination li.previous-pagination a:focus span::before,
+.pagination li.previous-pagination a:active span::before {
+    color: #006ECC;
+    background-color: transparent;
+}
+
+.pagination .active a,
+.pagination .active a:hover,
+.pagination .active a:focus,
+.pagination .active span,
+.pagination .active span:hover,
+.pagination .active span:focus {
+    background-color: #006ECC;
+    font-weight: 400;
+}
+
+.pagination .disabled span,
+.pagination .disabled span:hover,
+.pagination .disabled span:focus,
+.pagination .disabled a,
+.pagination .disabled a:hover,
+.pagination .disabled a:focus {
+    cursor: #000;
+    pointer-events: none;
+    min-width: inherit;
+    letter-spacing: 2px;
+    padding: 8px 0;
+    font-weight: 600;
+    color: #000;
+}
+
+.pagination-gallery {
+    margin-top: 0;
+}
+
+.pagination-gallery .section-header {
+    margin-bottom: 0;
+    border-bottom: 1px solid #C8C8C8;
+}
+
+.pagination-gallery .text-caption {
+    font-weight: 600;
+    color: #656565;
+}
+
+.pagination-gallery .section-body nav {
+    display: table-cell;
+}
+
+.pagination-gallery .section-body nav .pagination.gallery-list {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.pagination-gallery .pagination-results {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.pagination-gallery .pagination-results::after {
+    font-family: "Dev Center MDL2 Assets";
+    content: "\E70D\00a0";
+    color: #006ECC;
+    padding-left: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.pagination-gallery .pagination-results:hover::after {
+    color: #656565;
+}
+
+/* Devcenter Pagination custom styles */
+
+.pagination > li > a {
+    cursor: pointer;
+}
+
+.previous-pagination a.ng-hide {
+    display: block !important;
+    visibility: hidden;
+}
+
+.pagination-gallery {
+    padding-top: 100px;
+}
+
+/* Apply inline styles to month-calendar inputs
+   Bug #4682135 logged against Webcore to include this styling */
+.form-inline .month-calendar {
+    display: inline-block;
+    vertical-align: bottom;
+    width: auto;
+    margin-right: 6px;
+}
+
+/* -------------------Form Controls ------------------- */
+/* For MVC Form controls created w/ @Html syntax */
+/* Select styles */
+select:hover {
+    border-color: #656565;
+}
+
+.input-bottom-comment {
+    margin-top: 8px;
+    display: block;
+}
+
+.control.selection div textarea { 
+    margin-left: -28px;
+}
+
+/* Radio styles */
+.control.selection div input[type='radio'],
+.control.selection div input[type='checkbox'] {
+    margin-left: -28px;
+    position: absolute;
+}
+
+.selection.control {
+    padding-left: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    clear: both;
+}
+
+div.selection div,
+div.selection label {
+  float: left;
+}
+
+.form-group input[type="text"] + input[type="text"] {
+    margin-left: 8px;
+}
+
+/* Common Form Styles */
+.form-group-title {
+    font-size: 15px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.form-group-tall {
+    margin-bottom: 20px;
+}
+
+.form-group.dropdown-min-width select {
+    min-width: 33%;
+}
+
+.form-group.dropdown-min-width-horz select {
+    min-width: 100%;
+}
+
+.form-group-error {
+    margin-top: 20px;
+    display: block;
+}
+
+.form-group-addon.form-group-addon-adjacent > input,
+.form-group-addon.form-group-addon-adjacent > select,
+.form-group-addon.form-group-addon-adjacent .form-group {
+    margin: 0 20px;
+}
+
+.form-group-addon.form-group-addon-adjacent .form-group {
+    display: inline-block;
+}
+
+.form-group-addon.form-group-addon-adjacent input:first-child,
+.form-group-addon.form-group-addon-adjacent select:first-child,
+.form-group-addon.form-group-addon-adjacent input:last-child,
+.form-group-addon.form-group-addon-adjacent select:last-child,
+.form-group-addon.form-group-addon-adjacent .form-group:first-child,
+.form-group-addon.form-group-addon-adjacent .form-group:last-child {
+    margin-left: 0px;
+}
+
+.form-group-addon.form-group-addon-adjacent input:last-child,
+.form-group-addon.form-group-addon-adjacent select:last-child,
+.form-group-addon.form-group-addon-adjacent .form-group:last-child {
+    margin-right: 0px;
+}
+
+
+/* Inline Date Picker */
+.control.selection .labels + .date-time.labels {
+    padding-left: 10px;
+}
+
+.control.selection > div + .labels {
+    display: inline-block;
+}
+
+.control .labels #publishdatepicker {
+    padding-right: 10px;
+}
+
+.control.selection .labels > .hasDatepicker + span {
+    padding-left: 6px;
+}
+
+.control.selection .labels > .hasDatepicker {
+    padding-left: 6px;
+}
+
+.control.selection #Hour {
+    margin-right: 6px;
+}
+
+.control.has-inputs {
+    position: relative;
+}
+
+/* Disabled controls */
+.rbtn.disabled,
+a.disabled,
+span.disabled,
+div.disabled,
+.btn.disabled {
+    color: #656565;
+    cursor: not-allowed !important;
+}
+
+/* Text input w/ details on side  */
+.form-group.has-details {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.form-group.has-details input {
+    width: 100%;
+}
+
+.form-group.has-details .input-detail {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.form-group.has-details .detail-item {
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
+}
+
+.form-group.has-details .checkmark-icon {
+    position: relative;
+    display: block;
+}
+
+.form-group.has-details .checkmark-icon:after {
+    position: absolute;
+    left: -4px;
+    line-height: 20px;
+}
+
+.btn-group .checkmark-icon:after {
+    margin: 0 16px;
+    line-height: 40px;
+}
+
+.input-group-addon button {
+    outline: none;
+}
+
+/* Text areas */
+textarea {
+    resize: none;
+}
+
+/* Spacing for two columns of inputs */
+.input-two-col.row {
+    margin-bottom: 20px;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+.input-two-col.row .col-xs-12 {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/* Prevent red glow of required inputs in Firefox */
+:not(output):-moz-ui-invalid {
+    box-shadow: none;
+}
+
+
+
+/* Pricing market controls */
+/* default - checkbox w/ label and dropdown/message */
+.custom-market-price-scope .selection.control {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.market-input {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 50px;
+    margin-top: 0px;
+}
+
+.market-input .market-input-checkbox {
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 0 !important;
+}
+
+.market-input label.overflow-ellipsis {
+    padding-right: 8px;
+    display: block;
+}
+
+.market-input .market-input-checkbox,
+.market-input .market-input-label,
+.market-input .market-input-message,
+.market-input .market-input-control {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.market-input .market-input-message {
+    width: 60%;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.market-input .market-input-control {
+    width: 60%;
+    text-align: right;
+}
+
+.market-input .market-input-control select {
+    width: 100%;
+}
+
+.market-input .month-calendar:after {
+    top: 16px;
+}
+
+/* pricing market with multiple controls */
+.market-input.multi .market-input-message {
+    width: 80%;
+    padding-left: 8px;
+}
+
+.market-input.multi .market-input-control {
+    width: 20%;
+    padding-left: 8px;
+}
+
+/* Select all, select none, reset temporary styles */
+.global-checkbox-controls .global-checkbox-control.float-left + .float-left {
+    margin: 0 20px;
+}
+
+.pseudo-label {
+    margin-left: 28px;
+}
+
+/*---------------------- App sale styles -------------------------*/
+select.has-error,
+input.has-error {
+  border-color: #E81123;
+}
+
+.sale-error-badge {
+    color: #E81123;
+}
+
+#app-sales-table-body input {
+    background-color: white;
+}
+
+#app-sales-table {
+    table-layout: fixed;
+}
+
+#app-sales-table th.col-sale-error {
+    width: 3%;
+}
+
+#app-sales-table th.col-sale-name {
+    width: 20%;
+}
+
+#app-sales-table th.col-sale-start,
+#app-sales-table th.col-sale-end {
+    width: 22.5%;
+}
+
+#app-sales-table th.col-sale-price {
+    width: 15%;
+}
+
+#app-sales-table th.col-sale-action,
+#app-sales-table th.col-sale-markets {
+    width: 10%;
+}
+
+.sale-error-badge {
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+tr.sale-row:last-of-type {
+    display: table-row;
+}
+
+tr.sale-row.sale-deleted {
+    color: #656565;
+}
+
+tr.sale-row td.sale-edit-col,
+tr.sale-row.sale-edit td.sale-display-col,
+tr.sale-row a.undo-delete-sale,
+tr.sale-row.sale-deleted a.delete-sale {
+    visibility: hidden;
+    display: none;
+}
+
+tr.sale-row.sale-edit td.sale-edit-col {
+    visibility: visible;
+    display: table-cell;
+}
+
+tr.sale-row.sale-deleted a.undo-delete-sale {
+    visibility: visible;
+    display: inline;
+}
+
+.form-group.sale-date-inputs .month-calendar input,
+.form-group.sale-date-inputs .month-calendar {
+    width: 100%
+}
+
+/* ------------------- Search ------------------- */
+
+.template-search .input-group-addon {
+    background: white !important; 
+    border: 2px solid #ccc;
+    border-left: none;
+    border-radius: 0;
+}
+        
+input[type='search'].form-control {
+    border-right: 0; 
+    box-shadow: 0 0 0; 
+    border-color: #ccc;
+    min-width: 230px;
+}
+
+.template-search button {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+        
+.template-search button:hover {
+    border: 0;
+}
+        
+.template-search .input-group-addon button {
+    min-width: 30px;
+    width: 30px;
+    background-color: transparent;
+    padding: 0 0;
+    height: 28px;
+    padding-top: 3px;
+}
+
+.template-search .input-group-addon button .win-icon {
+    /* To Do: get final hex color from design, bug #2151326 */;
+    color: gray;
+}
+
+.template-search .input-group-addon {
+    padding: 0 0;
+}
+        
+input[type='search'],
+input[type='search']:focus,
+input[type='search']:hover {
+    border-color: #CCCCCC;
+}
+        
+.template-search input:focus + .input-group-addon {
+    border-color: #CCCCCC;
+}
+        
+.template-search input::-ms-clear:active, input::-ms-reveal:active {
+    background-color: #FFFFFF;
+}
+
+input[type='search'].pageSection-search:hover ~ .input-group-addon,
+input[type='search'].pageSection-search:active ~ .input-group-addon,
+input[type='search'].pageSection-search:focus ~ .input-group-addon,
+input[type='search'].pageSection-search:hover,
+input[type='search'].pageSection-search:active,
+input[type='search'].pageSection-search:focus {
+    border-color: #0078d7;
+    outline: none;
+}
+
+.input-group-addon button {
+    outline: none;
+}
+
+input[type='search'],
+input[type='search']:focus,
+input[type='search']:hover {
+    border-color: #CCCCCC;
+}
+        
+.template-search input:focus + .input-group-addon {
+    border-color: #CCCCCC;
+}
+        
+.template-search input::-ms-clear:active, input::-ms-reveal:active {
+    background-color: #FFFFFF;
+}
+
+input[type="search"].pageSection-search:hover ~ .input-group-addon,
+input[type="search"].pageSection-search:active ~ .input-group-addon,
+input[type="search"].pageSection-search:focus ~ .input-group-addon,
+input[type="search"].pageSection-search:hover,
+input[type="search"].pageSection-search:active,
+input[type="search"].pageSection-search:focus {
+    border-color: #0078d7;
+    outline: none;
+}
+
+.input-group-addon button {
+    outline: none;
+}
+
+/* ------------------- Ingestion-specific Patterns ------------------- */
+.page-title-header p {
+    margin-bottom: 20px;
+}
+
+/* Page title with action */
+.page-title-header.has-header-action .title-outer {
+    display: table-cell;
+    padding-right:10px;
+}
+
+.page-title-header.has-header-action .title-inner {
+    display:table;
+    table-layout:fixed;
+    width:100%
+}
+
+
+.page-title-header.has-header-action .header-action {
+    display: table-cell;
+    vertical-align: auto;
+    white-space: nowrap;
+}
+
+.header-action.header-action-inner {
+    padding-right: 35px;
+}
+
+.page-title-header.short-header,
+.page-title-header.has-header-action.short-header {
+    margin-bottom: 48px;
+}
+
+/* Status reported at the top of the page below page title */
+.header-status {
+    margin-top: 24px;
+}
+
+.header-status .status-icon {
+    margin-right: 8px;
+    float: left;
+    vertical-align: middle;
+}
+
+.header-status span {
+    line-height: 2.2em;
+}
+
+/* Text at top of the page below page title */
+.page-title + .header-info {
+    margin-top: 16px;
+    max-width: 75%;
+}
+
+.header-info p {
+    margin: 0;
+}
+
+/* Custom section styles */
+section.section-collapsed {
+    margin-bottom: 0;
+}
+
+/* Custom section headers */
+.section-header.has-controls .btn-primary {
+    min-width: 160px;
+}
+
+.section-header.has-controls .btn-group,
+.section-header.has-controls .form-group {
+    margin: 0 0;
+}
+
+@media (min-width:540px) {
+	.section-header.has-controls .form-searchbox {
+		width: 276px;
+		float: right;
+	}
+}
+
+@media (max-width:539px) {
+	.section-header.has-controls .form-searchbox {
+        margin-top: 4px;
+	}
+}
+
+/* Task status table and footer error for submissions and IAPs */
+.task-status-table {
+    margin-bottom: 84px;
+}
+
+.managed-app-status-table {
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+.task-status-table .task-title {
+    margin: 0;
+    display: inline-block;
+}
+
+.task-status-table .status-col .status-icon {
+     width: 28px;
+}
+
+
+.task-status-table .task-desc {
+    display: block;
+}
+
+.task-status-table .status-col .status-text {
+    line-height: 33px;
+}
+
+.task-status-table .status-col .status-icon {
+    margin-left: 8px;
+}
+
+.task-status-table .task-detail-list,
+.task-status-table .task-desc {
+    margin: 12px 0 2px 0;
+}
+
+.task-status-table .task-desc .rating-icon {
+    margin: 3px 0;
+}
+
+.task-status-table .alert {
+    margin: 0;
+}
+
+.task-status-container .status-footer-comments {
+    margin-top: -36px;
+    margin-bottom: 48px;
+}
+
+.cert-reports-table {
+    margin-bottom: 40px;
+}
+
+.cert-reports-title {
+    margin-bottom: 10px;
+}
+
+/* Submission and IAP Tables */
+.table.product-listing td {
+    vertical-align: middle;
+}
+
+.table.product-listing.all-products .media-title {
+    font-weight: normal;
+    padding: 2px;
+    max-height: none;
+}
+
+.table.product-listing.all-products tr th:nth-of-type(1) {
+    width: 45%;
+}
+
+.table.product-listing.all-products tr th:nth-of-type(2) {
+    width: 35%;
+}
+
+.table.product-listing.all-products tr th:nth-of-type(3) {
+    width: 20%;
+}
+
+.table.product-listing .app-icon {
+    margin-right: 1px;
+    margin-top: 0px;
+    width: 48px;
+    height: 48px;
+    background-color: #333333;
+}
+
+/* App identity table*/
+.table.app-identity {
+   margin-top: 32px;
+   word-break: break-all;
+}
+
+.table.app-identity .label {
+   width: 35%;
+}
+
+.table.app-identity .value {
+   width: 65%;
+}
+
+/* Submissions list */
+.table.submissions tr th:nth-of-type(1) {
+    width: 45%;
+}
+
+.table.submissions tr th:nth-of-type(2)  {
+    width: 35%;
+}
+
+.table.submissions tr th:nth-of-type(3)  {
+    width: 20%;
+}
+
+.table.submissions.has-action tr th:nth-of-type(2)  {
+    width: 25%;
+}
+
+.table.submissions.has-action tr th:nth-of-type(3),
+.table.submissions.has-action tr th:nth-of-type(4) {
+    width: 15%;
+}
+
+.table.submissions tr:nth-child(odd) + .rollout-row {
+    background-color: #F2F2F2 !important;
+}
+
+.table.submissions tr:nth-child(even) + .rollout-row {
+    background-color: white !important;
+}
+
+/* Flights table */
+.flights-table tr th:nth-of-type(1) {
+    width: 10%;
+}
+
+.flights-table tr th:nth-of-type(2),
+.flights-table tr th:nth-of-type(3) {
+    width: 35%;
+}
+
+.flights-table tr th:nth-of-type(4) {
+    width: 20%;
+}
+
+.flights-table.has-action tr th:nth-of-type(1) {
+    width: 10%;
+}
+
+.flights-table.has-action tr th:nth-of-type(2) {
+    width: 35%;
+}
+
+.flights-table.has-action tr th:nth-of-type(3) {
+    width: 25%;
+}
+
+.flights-table.has-action tr th:nth-of-type(4),
+.flights-table.has-action tr th:nth-of-type(5) {
+    width: 15%;
+}
+
+.flights-table tr.flight-row-odd,
+.flights-table tr.flight-row-odd + .flight-update-row {
+    background-color: #F2F2F2 !important;
+}
+
+.flights-table tr.flight-row-even,
+.flights-table tr.flight-row-even + .flight-update-row {
+    background-color: white !important;
+}
+
+/* Group table */
+.group-table tr th:nth-of-type(1) {
+    width: 45%;
+}
+
+.group-table tr th:nth-of-type(2) {
+    width: 35%;
+}
+
+.group-table tr th:nth-of-type(3) {
+    width: 20%;
+}
+
+/* Reserved names table */
+.reserved-names {
+    word-break: break-all;
+}
+.reserved-names .name-col {
+    width: 57%;
+}
+
+.reserved-names .status-col {
+    width: 29%;
+}
+
+.reserved-names .action-col {
+    width: 14%;
+}
+
+/* Nokia map table */
+.nokia-map-table tr {
+    background-color: #F2F2F2;
+}
+
+.nokia-map-table td:nth-of-type(1) {
+    width: 40%;
+}
+
+.nokia-map-table td:nth-of-type(2) {
+    width: 60%;
+}
+
+.nokia-map-table tr:not(:first-child) td {
+    padding-top: 0;
+}
+
+/* Certification progress graphic */
+.cert-progress {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.cert-progress .graphic-row {
+    display: table-row;
+}
+
+.cert-progress [class^="state-graphic"] {
+    display: table-cell;
+    width: 32%;
+}
+
+.cert-progress .state-graphic-3 {
+    width: 36%;
+}
+
+.cert-progress .graphic-container {
+    display: table;
+    width: 100%;
+}
+
+.cert-progress .status-icon {
+    display: table-cell;
+}
+
+.cert-progress .progress-line-container {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.cert-progress .completed-line {
+    width: 100%;
+    height: 2px;
+    background-color: green;
+}
+
+.cert-progress .incomplete-line {
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+}
+
+.cert-progress .label-row {
+    display: table-row;
+}
+
+.cert-progress [class^="label-col-"] {
+    display: table-cell;
+    padding-top: 10px;
+}
+
+.cert-progress .label-split {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.cert-progress .label-split [class^="label"] {
+    display: table-cell;
+}
+
+.cert-progress .label-split .label-4 {
+    text-align: right;
+}
+
+.ui-progressbar-value {
+    background-color: red !important;
+    color: #428bca !important;
+}
+
+.ui-progressbar {
+    height: 4px !important;
+    margin-top: 24px;
+    background-color: rgba(0,0,0,.2) !important;
+
+}
+
+/* IAP Listing Languages */
+.language-list-container .checkbox {
+    margin-top: 0;
+}
+
+/*  Drop areas */
+div.dropArea {
+    min-height: 100px;
+    display: table;
+}
+
+div.dropArea,
+.dropArea-width {
+    width: 520px;
+}
+
+.dropArea-adjacent-input {
+    min-width: 520px;
+}
+
+div.dropArea.disabled {
+    display: none;
+    cursor: not-allowed;
+}
+
+.dropArea-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.dropArea-inner input[type=file] {
+    display: none;
+}
+
+.dropArea-inner p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dropArea.hoverdropzone .dropArea-inner, .listing-image-inner.hoverdropzone {
+    background-color: #bdcfdc !important;
+}
+
+.draggedElement {
+    background-color: rgba(255,0,0,0.4) !important;
+}
+
+.ui-drop-hover {
+    background-color: rgba(0,128,255,0.4) !important;
+} 
+
+/* Submission flighting */
+.flight-ranking-table tr th:nth-of-type(1) {
+    width: 15%;
+}
+
+.flight-ranking-table tr th:nth-of-type(2) {
+    width: 55%;
+}
+
+.flight-ranking-table tr th:nth-of-type(3) {
+    width: 20%;
+}
+
+/* Page bottom buttons */
+.page-bottom-buttons {
+    margin-top: 84px;
+}
+
+.page-bottom-buttons .btn-group,
+.page-bottom-buttons.btn-group {
+    margin-bottom: 0;
+}
+
+/* ------------------- OneUI Component Overrides ------------------- */
+.loader.loader-small,
+.loader.loader-small .circle {
+    width: 25px;
+    height: 25px;
+}
+
+.loader.loader-small .circle:after {
+    font-size: 12px;
+}
+
+.input-loader {
+    display: inline-block;
+}
+
+/* ------------------- Custom Modal Styles ------------------- */
+.modal.loading {
+    width: auto;
+}
+
+.modal.loading .modal-dialog {
+    width: 300px;
+    text-align: center;
+}
+
+.modal.loading .loader {
+    margin: 20px auto;
+}
+
+.modal.loading .modal-backdrop {
+    pointer-events: none;
+}
+
+/* Design to confirm if single button floating right in group is intended or whether this is a webcore fix in which case this code should be removed  */
+.modal :only-child.btn {
+    float: left;
+}
+
+.modal-content .btn-group {
+    margin-bottom: 0;
+}
+
+/* ------------------- In-progress states for server-side operations ------------------- */
+/* Progress indicators next to buttons */
+.btn-group .progress-ring {
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: 16px;
+}
+
+/* In-progress page styles */
+body.inProgressPage {
+    pointer-events: none;
+}
+
+.rolling-dots-placeholder.ng-hide {
+    display: block !important;
+    visibility: hidden;
+}
+
+.rolling-dots-placeholder .progress {
+    margin-bottom: 0;
+}
+
+/* ------------------- Helper classes ------------------- */
+.overflow-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+.hidden,
+[type="hidden"] {
+    display: none !important;
+}
+
+.spacer-48-top {
+    margin-top: 48px !important;
+}
+
+.spacer-48-bottom {
+    margin-bottom: 48px !important;
+}
+
+.spacer-24-top {
+    margin-top: 24px !important;
+}
+
+.spacer-24-bottom {
+    margin-bottom: 24px !important;
+}
+
+.spacer-8-top {
+    margin-top: 8px !important;
+}
+
+.spacer-8-bottom {
+    margin-bottom: 8px !important;
+}
+
+.section-spacer-top {
+    margin-top: 71px !important;
+}
+
+.remove-padding-bottom {
+    padding-bottom: 0px !important;
+}
+
+.remove-padding {
+    padding: 0 !important;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.block {
+    display: block !important;
+}
+
+.inline {
+    display: inline !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+/* Makes elements match width of reduced-string-length */
+.reduced-el-width {
+    width: 66%;
+}
+
+/* Makes elements match width of reduced-string-length */
+.reduced-el-width {
+    width: 66%;
+}
+
+@media (min-width: 768px) {
+    .remove-bottom-margin-md {
+        margin-bottom: 0;
+    }
+}
+
+/* ------------------- Legacy styles (referenced in JS) ------------------- */
+.dceHidden {
+    display: none;
+}
+.expandLink {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+/* ------------------- High contrast styles ------------------- */
+@media screen and (-ms-high-contrast: active) {
+    .link {
+        color: #7575e9;
+    }
+
+    .cert-progress .incomplete-line,
+    .cert-progress .completed-line {
+        background-color: grey;
+    }
+
+    .listing-image-container .listing-image-inner,
+    .caption-edit-container {
+        background-color: yellow;
+    }
+
+    .listing-image-container .last-empty .add-icon,
+    .listing-image-container .magnify-icon,
+    .listing-image-container .delete-icon,
+    .listing-image-container .edit-icon,
+    .listing-image-container a {
+        color: black;
+    }
+
+    .progress-bar {
+        background-color: #80ff00;
+    }
+
+    .dropArea-inner {
+        background-color: #ffffff;
+    }
+
+    .dropArea-inner p {
+        color: black;
+    }
+
+     /* BUG #4682262 logged against webcore */
+    .ui-datepicker.month-calendar-widget {
+        background-color: black;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .link {
+        color: #1f1fab;
+    }
+
+    .listing-image-container .listing-image-inner,
+     .caption-edit-container {
+        background-color: black;
+    }
+    
+    .listing-image-container .last-empty .add-icon,
+    .listing-image-container .magnify-icon,
+    .listing-image-container .delete-icon,
+    .listing-image-container .edit-icon,
+    .listing-image-container a {
+        color: white;
+    }
+
+    .progress-bar {
+        background-color: black;
+    }
+}
+
+@media screen and (-ms-high-contrast: white-on-black) {
+    .link {
+        color: yellow;
+    }
+
+    .listing-image-container .listing-image-inner,
+    .caption-edit-container {
+        background-color: white;
+    }
+
+    .listing-image-container .last-empty .add-icon,
+    .listing-image-container .magnify-icon,
+    .listing-image-container .delete-icon,
+    .listing-image-container .edit-icon,
+    .listing-image-container a, 
+    .listing-image-inner .text-caption {
+        color: black;
+    }
+
+    .progress-bar {
+        background-color: white;
+    }
+}
+
+#delete-submission-error {
+    display: none;
+}

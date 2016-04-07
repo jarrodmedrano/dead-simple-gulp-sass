@@ -1,10 +1,83 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<!-- ! Copyright (C) Microsoft Corporation. All rights reserved. -->
+<html dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Pricing and availability</title>
+    <!-- InstanceEndEditable -->
+    <!-- WebCore CSS v3.7.3 -->
+    <link rel="stylesheet" type="text/css" href="https://assets.onestore.ms/cdnfiles/external/webcore/4.9.0/stylesheets/WebCore.4.9.0.ltr.light.min.css">
+    <!-- Shell CSS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://osgdesigntools/styleguides/services/scripts/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/site.css">
 </head>
 <body>
+
+<div class="container ingestion-prototype">
+    <div class="row">
+        <div class="col-xs-24">
+            <header class="page-title-header">
+                <h1 class="page-title">Pricing and availability</h1>
+            </header>
+            <form id="idFormPricing" action="#" method="post">
+            <section class="section">
+                <div class="section-body">
+                    <section class="section has-header-action">
+                        <header class="section-header">
+                            <div class="header-titles">
+                                <div class="titles-outer">
+                                    <div class="titles-inner">
+                                        <h5 class="section-title text-maxlines-1">Dates</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="header-action">
+                                <a tabindex="0" class="expandLink collapsed" data-target="#idCustomMarket" intro-target="#marketIntro" data-command="toggleVisible">Show options</a>
+                            </div>
+                        </header>
+                        <div class="section-body custom-market-price-scope">
+                            <div class="controlContainer spacer-16-top" id="marketsDiv"></div>
+                            <div id="id_MarketPricing" class="market col-xs-11 remove-padding">
+                                <div class="labels market-input  form-group">
+                                    <div class="market-input-checkbox checkbox">
+                                        <label data-toggle="tooltip" title="Afghanistan" class="overflow-ellipsis" for="OfferMarkets86">
+                                            <input checked="checked" data-command="toggleMarket" id="OfferMarkets86" name="Offer.Markets[0].Selected" type="checkbox" value="true"><input name="Offer.Markets[0].Selected" type="hidden" value="false">
+                                            <span>Afghanistan</span>
+                                        </label>
+                                    </div>
+                                    <span class="market-input-message hidden">App not available</span>
+                                    <div class="market-input-control"><select class="PriceTier" data-val="true" data-val-required="The PriceTier field is required." id="Offer_Markets_0__PriceTier" name="Offer.Markets[0].PriceTier"><option selected="selected" value="-1">Free (base)</option>
+                                        <option value="Tier1">Free</option>
+                                        <option value="Tier2">0.99 USD</option>
+                                        <option value="Tier97">1.10 USD</option>
+                                        <option value="Tier3">1.29 USD</option>
+                                    </select></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+           </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $( ".month-calendar input" ).datepicker({
+            showOtherMonths: true, // makes dates from next and previous months visible.
+            beforeShow: function() { // adds css class for webcore skin.
+                $('#ui-datepicker-div').addClass("month-calendar-widget");
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
