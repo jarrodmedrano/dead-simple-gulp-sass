@@ -1,0 +1,9 @@
+.input-group select {
+  margin-right: 5px; }
+
+@media screen and (max-width: 540px) {
+  .input-group {
+    margin-bottom: 10px;
+    width: 100%; }
+    .input-group .month-calendar {
+      width: 100%; } }

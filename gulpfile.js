@@ -15,12 +15,12 @@ gulp.task('serve', ['sass'], function () {
 
     // add browserSync.reload to the tasks array to make
     // all browsers reload after tasks are complete.
-    gulp.watch('src/sass/**/*.scss', ['sass']);
+    gulp.watch('src/**/*.scss', ['sass']);
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
 gulp.task('sass', function () {
-    return gulp.src('./sass/**/*.scss')
+    return gulp.src('./src/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.stream());

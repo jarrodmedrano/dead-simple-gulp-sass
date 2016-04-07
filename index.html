@@ -9,11 +9,16 @@
     <title>Pricing and availability</title>
     <!-- InstanceEndEditable -->
     <!-- WebCore CSS v3.7.3 -->
-    <link rel="stylesheet" type="text/css" href="https://assets.onestore.ms/cdnfiles/external/webcore/4.9.0/stylesheets/WebCore.4.9.0.ltr.light.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://assets.onestore.ms/cdnfiles/external/webcore/4.9.0/stylesheets/WebCore.4.9.0.ltr.light.min.css">
     <!-- Shell CSS -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
     <script type="text/javascript" src="http://osgdesigntools/styleguides/services/scripts/bootstrap.js"></script>
+    <script src="http://osgdesigntools/styleguides/services/stylesheets/jquery-ui/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" href="css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 
@@ -23,56 +28,273 @@
             <header class="page-title-header">
                 <h1 class="page-title">Pricing and availability</h1>
             </header>
-            <form id="idFormPricing" action="#" method="post">
-            <section class="section">
-                <div class="section-body">
-                    <section class="section has-header-action">
-                        <header class="section-header">
-                            <div class="header-titles">
-                                <div class="titles-outer">
-                                    <div class="titles-inner">
-                                        <h5 class="section-title text-maxlines-1">Dates</h5>
+            <form id="idFormPricing" action="#" method="post" class="form-inline">
+                <section class="section">
+                    <div class="section-body">
+                        <section class="section has-header-action">
+                            <header class="section-header">
+                                <div class="header-titles">
+                                    <div class="titles-outer">
+                                        <div class="titles-inner">
+                                            <h5 class="section-title text-maxlines-1">Dates</h5>
+                                        </div>
                                     </div>
                                 </div>
-
-                            </div>
-                            <div class="header-action">
-                                <a tabindex="0" class="expandLink collapsed" data-target="#idCustomMarket" intro-target="#marketIntro" data-command="toggleVisible">Show options</a>
-                            </div>
-                        </header>
-                        <div class="section-body custom-market-price-scope">
-                            <div class="controlContainer spacer-16-top" id="marketsDiv"></div>
-                            <div id="id_MarketPricing" class="market col-xs-11 remove-padding">
-                                <div class="labels market-input  form-group">
-                                    <div class="market-input-checkbox checkbox">
-                                        <label data-toggle="tooltip" title="Afghanistan" class="overflow-ellipsis" for="OfferMarkets86">
-                                            <input checked="checked" data-command="toggleMarket" id="OfferMarkets86" name="Offer.Markets[0].Selected" type="checkbox" value="true"><input name="Offer.Markets[0].Selected" type="hidden" value="false">
-                                            <span>Afghanistan</span>
+                                <div class="header-action">
+                                    <a tabindex="0" class="expandLink collapsed" data-target="#idCustomMarket"
+                                       intro-target="#marketIntro" data-command="toggleVisible">Hide options</a>
+                                </div>
+                            </header>
+                            <div class="section-body custom-market-price-scope">
+                                <div class="controlContainer spacer-16-top"></div>
+                                <div class="market col-md-24 remove-padding">
+                                    <div class="labels form-group ">
+                                        <div class="input-group col-md-4"><label data-toggle="tooltip"
+                                                                                 title="Afghanistan"
+                                                                                 class="overflow-ellipsis form-control-label">
+                                            <span>Release date</span>
                                         </label>
+                                        </div>
+                                        <div class="input-group"><select class="PriceTier form-control">
+                                            <option selected="selected" value="-1">On this date</option>
+                                        </select></div>
+                                        <div class="input-group">
+
+                                            <div class="month-calendar form-control">
+                                                <input type="text" value="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">9:00</option>
+                                                <option value="-1">10:00</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">UTC</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <span class="market-input-message hidden">App not available</span>
-                                    <div class="market-input-control"><select class="PriceTier" data-val="true" data-val-required="The PriceTier field is required." id="Offer_Markets_0__PriceTier" name="Offer.Markets[0].PriceTier"><option selected="selected" value="-1">Free (base)</option>
-                                        <option value="Tier1">Free</option>
-                                        <option value="Tier2">0.99 USD</option>
-                                        <option value="Tier97">1.10 USD</option>
-                                        <option value="Tier3">1.29 USD</option>
-                                    </select></div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                </div>
-            </section>
-           </form>
+                            <div class="section-body custom-market-price-scope">
+                                <div class="controlContainer spacer-16-top"></div>
+                                <div class="market col-md-24 remove-padding">
+                                    <div class="labels form-group ">
+                                        <div class="input-group col-md-4"><label data-toggle="tooltip"
+                                                                                 title="Afghanistan"
+                                                                                 class="overflow-ellipsis form-control-label">
+                                            <span>End date</span>
+                                        </label>
+                                        </div>
+                                        <div class="input-group"><select class="PriceTier form-control">
+                                            <option selected="selected" value="-1">On this date</option>
+                                        </select></div>
+                                        <div class="input-group">
+
+                                            <div class="month-calendar form-control">
+                                                <input type="text" value="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">9:00</option>
+                                                <option value="-1">10:00</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">UTC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-body custom-market-price-scope">
+                                <div class="controlContainer spacer-16-top"></div>
+                                <div class="market col-md-24 remove-padding">
+                                    <div class="labels form-group ">
+                                        <div class="input-group col-md-4"><label data-toggle="tooltip"
+                                                                                 title="Afghanistan"
+                                                                                 class="overflow-ellipsis form-control-label">
+                                            <span>Pre-order</span>
+                                        </label>
+                                        </div>
+                                        <div class="input-group"><select class="PriceTier form-control">
+                                            <option selected="selected" value="-1">On this date</option>
+                                        </select></div>
+                                        <div class="input-group">
+
+                                            <div class="month-calendar form-control">
+                                                <input type="text" value="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">9:00</option>
+                                                <option value="-1">10:00</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">UTC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-body custom-market-price-scope">
+                                <div class="controlContainer spacer-16-top"></div>
+                                <div class="market col-md-24 remove-padding">
+                                    <div class="labels form-group ">
+                                        <div class="input-group col-md-4"><label data-toggle="tooltip"
+                                                                                 title="Afghanistan"
+                                                                                 class="overflow-ellipsis form-control-label">
+                                            <span>Pre-order end</span>
+                                        </label>
+                                        </div>
+                                        <div class="input-group"><select class="PriceTier form-control">
+                                            <option selected="selected" value="-1">On this date</option>
+                                        </select></div>
+                                        <div class="input-group">
+
+                                            <div class="month-calendar form-control">
+                                                <input type="text" value="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">9:00</option>
+                                                <option value="-1">10:00</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">UTC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-body custom-market-price-scope">
+                                <div class="controlContainer spacer-16-top"></div>
+                                <div class="market col-md-24 remove-padding">
+                                    <div class="labels form-group ">
+                                        <div class="input-group col-md-4"><label data-toggle="tooltip"
+                                                                                 title="Afghanistan"
+                                                                                 class="overflow-ellipsis form-control-label">
+                                            <span>Unlock date</span>
+                                        </label>
+                                        </div>
+                                        <div class="input-group"><select class="PriceTier form-control">
+                                            <option selected="selected" value="-1">On this date</option>
+                                        </select></div>
+                                        <div class="input-group">
+
+                                            <div class="month-calendar form-control">
+                                                <input type="text" value="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">9:00</option>
+                                                <option value="-1">10:00</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">UTC</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <button class="btn-primary">Add market override</button>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="section-body">
+                        <section class="section has-header-action">
+                            <header class="section-header">
+                                <div class="header-titles">
+                                    <div class="titles-outer">
+                                        <div class="titles-inner">
+                                            <h5 class="section-title text-maxlines-1">Pricing</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-action">
+                                    <a tabindex="0" class="expandLink collapsed" data-target="#idCustomMarket"
+                                       intro-target="#marketIntro" data-command="toggleVisible">Hide options</a>
+                                </div>
+                            </header>
+                            <div class="section-body custom-market-price-scope">
+                                <div class="controlContainer spacer-16-top"></div>
+                                <div class="market col-md-24 remove-padding">
+                                    <div class="labels form-group ">
+                                        <div class="input-group col-md-4"><label data-toggle="tooltip"
+                                                                                 title="Afghanistan"
+                                                                                 class="overflow-ellipsis form-control-label">
+                                            <span>Price tier</span>
+                                        </label>
+                                        </div>
+                                        <div class="input-group"><select class="PriceTier form-control">
+                                            <option selected="selected" value="-1">As soon as possible</option>
+                                        </select></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-body custom-market-price-scope">
+                                <div class="controlContainer spacer-16-top"></div>
+                                <div class="market col-md-24 remove-padding">
+                                    <div class="labels form-group ">
+                                        <div class="input-group col-md-4"><label data-toggle="tooltip"
+                                                                                 title="Afghanistan"
+                                                                                 class="overflow-ellipsis form-control-label">
+                                            <span>Duration</span>
+                                        </label>
+                                        </div>
+                                        <div class="input-group"><select class="PriceTier form-control">
+                                            <option selected="selected" value="-1">7 days</option>
+                                        </select></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-body custom-market-price-scope">
+                                <div class="controlContainer spacer-16-top"></div>
+                                <div class="market col-md-24 remove-padding">
+                                    <div class="labels form-group ">
+                                        <div class="input-group col-md-4"><label data-toggle="tooltip"
+                                                                                 title="Afghanistan"
+                                                                                 class="overflow-ellipsis form-control-label">
+                                            <span>Free trial</span>
+                                        </label>
+                                        </div>
+                                        <div class="input-group"><select class="PriceTier form-control">
+                                            <option selected="selected" value="-1">No free trial</option>
+                                        </select></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn-primary">Save</button>
+                        </section>
+                    </div>
+                </section>
+            </form>
         </div>
     </div>
 </div>
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $( ".month-calendar input" ).datepicker({
+        $(".month-calendar input").datepicker({
             showOtherMonths: true, // makes dates from next and previous months visible.
-            beforeShow: function() { // adds css class for webcore skin.
+            beforeShow: function () { // adds css class for webcore skin.
                 $('#ui-datepicker-div').addClass("month-calendar-widget");
             }
         });
