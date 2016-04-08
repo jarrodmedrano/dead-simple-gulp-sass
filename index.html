@@ -11,7 +11,8 @@
     <!-- WebCore CSS v3.7.3 -->
     <link rel="stylesheet" type="text/css"
           href="https://assets.onestore.ms/cdnfiles/external/webcore/4.9.0/stylesheets/WebCore.4.9.0.ltr.light.min.css">
-
+    <link rel="stylesheet" type="text/css"
+          href="css/combined-styles.css">
     <!-- Shell CSS -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
@@ -33,7 +34,6 @@
             <form id="idFormPricing" action="#" method="post">
                 <section class="section">
                     <div class="section-body">
-                        <section class="section">
                             <header class="section-header">
                                 <div class="header-titles">
                                     <div class="titles-outer">
@@ -44,9 +44,8 @@
                                 </div>
                             </header>
                             <div class="section-body">
-                                <p>Your add-on will be available in 242 of 242 markets. <a href="#">Learn more</a></p>
+                                <p>Your app will be available in 242 of 242 markets. <a href="#">Learn more</a></p>
                             </div>
-                        </section>
                     </div>
                 </section>
 
@@ -59,22 +58,27 @@
                             <div class="clearfix">
                                 <div class="radio">
                                     <label for="pd1"><input name="publish-dates" id="pd1" type="radio"><span
-                                            class="text-body">Make this add-on available in the Store.</span></label>
+                                            class="text-body">Make this app available in the Store.</span></label>
                                 </div>
                             </div>
                             <div class="clearfix">
                                 <div class="radio">
                                     <label for="pd2"><input name="publish-dates" id="pd2" type="radio"><span
-                                            class="text-body">Hide this add-on in the Store. Customers
-                                            with a direct link to the add-on's listing can still download it,
-                                                except on Windows 8 and Windows 8.1. <a href="#">Learn
-                                            more</a></span></label>
+                                            class="text-body">Hide this app in the Store. Customers with a direct link to the app's listing can still download it, except on Windows 8 and Windows 8.1. <a href="#">Learn
+                                        more</a></span></label>
                                 </div>
                             </div>
                             <div class="clearfix">
                                 <div class="radio">
                                     <label for="pd3"><input name="publish-dates" id="pd3" type="radio"><span
-                                            class="text-body">Hide this add-on and prevent acquisition.
+                                            class="text-body">Hide this app and make it available only to the people you specify, who can download this add-on on Windows Phone 8.x devices. A promotional code may be used to download this app on Windows 10 devices. <a href="#">Learn
+                                            more</a></span></label>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="radio">
+                                    <label for="pd4"><input name="publish-dates" id="pd4" type="radio"><span
+                                            class="text-body">Hide this app and prevent acquisition.
                                                 Customers with a promotional code can still download it on Windows 10
                                                 devices.
                                                 <a href="#">Learn more</a></span></label>
@@ -83,7 +87,6 @@
                         </div>
                     </div>
                 </section>
-                <section class="section">
 
                     <section class="section has-header-action">
                         <header class="section-header">
@@ -100,127 +103,68 @@
                             </div>
                         </header>
                         <div class="section-body">
-                            <div class="controls form-inline">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <label data-toggle="tooltip" title="Afghanistan"
-                                               class="overflow-ellipsis form-control-label">
-                                            <span>Release date</span>
-                                        </label>
-                                    </div>
-                                    <div class="input-group">
-                                        <select class="PriceTier form-control">
-                                            <option selected="selected" value="-1">On this date</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-group">
-                                        <div class="month-calendar form-control">
-                                            <input type="text" value="mm/dd/yyyy"/>
+                            <div class="controls">
+                                <div class="form-group form-inline row">
+                                    <label class="col-md-4 col-sm-24">
+                                        <span>Release date</span>
+                                    </label>
+                                    <div class="col-md-20">
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="-1">On this date</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="month-calendar form-control">
+                                                <input type="text" value="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">9:00</option>
+                                                <option value="-1">10:00</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">UTC</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="input-group">
-                                        <select class="form-control">
-                                            <option selected="selected" value="0">9:00</option>
-                                            <option value="-1">10:00</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-group">
-                                        <select class="form-control">
-                                            <option selected="selected" value="0">UTC</option>
-                                        </select>
-                                    </div>
                                 </div>
-                                <div class="form-group ">
-                                    <div class="input-group"><label data-toggle="tooltip"
-                                                                    title="Afghanistan"
-                                                                    class="overflow-ellipsis form-control-label">
+                                <div class="form-group form-inline row">
+                                    <label class="col-md-4 col-sm-24">
                                         <span>End date</span>
                                     </label>
-                                    </div>
-                                    <div class="input-group"><select class="PriceTier form-control">
-                                        <option selected="selected" value="-1">On this date</option>
-                                    </select></div>
-                                    <div class="input-group">
+                                    <div class="col-md-20">
+                                        <div class="input-group"><select class="form-control">
+                                            <option selected="selected" value="-1">On this date</option>
+                                        </select></div>
+                                        <div class="input-group">
 
-                                        <div class="month-calendar form-control">
-                                            <input type="text" value="mm/dd/yyyy"/>
+                                            <div class="month-calendar form-control">
+                                                <input type="text" value="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="input-group ">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">9:00</option>
+                                                <option value="-1">10:00</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">UTC</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="input-group">
-                                        <select class="form-control">
-                                            <option selected="selected" value="0">9:00</option>
-                                            <option value="-1">10:00</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-group">
-                                        <select class="form-control">
-                                            <option selected="selected" value="0">UTC</option>
-                                        </select>
-                                    </div>
                                 </div>
-                                <div class="form-group ">
-                                    <div class="input-group"><label data-toggle="tooltip"
-                                                                    title="Afghanistan"
-                                                                    class="overflow-ellipsis form-control-label">
+                                <div class="form-group form-inline row">
+                                    <label class="col-md-4 col-sm-24">
                                         <span>Pre-order</span>
                                     </label>
-                                    </div>
-                                    <div class="input-group"><select class="PriceTier form-control">
-                                        <option selected="selected" value="-1">On this date</option>
-                                    </select></div>
-                                    <div class="input-group">
-
-                                        <div class="month-calendar form-control">
-                                            <input type="text" value="mm/dd/yyyy"/>
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                        <select class="form-control">
-                                            <option selected="selected" value="0">9:00</option>
-                                            <option value="-1">10:00</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-group">
-                                        <select class="form-control">
-                                            <option selected="selected" value="0">UTC</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group ">
-                                    <div class="input-group"><label data-toggle="tooltip"
-                                                                    title="Afghanistan"
-                                                                    class="overflow-ellipsis form-control-label">
-                                        <span>Pre-order end</span>
-                                    </label>
-                                    </div>
-                                    <div class="input-group"><select class="PriceTier form-control">
-                                        <option selected="selected" value="-1">On this date</option>
-                                    </select></div>
-                                    <div class="input-group">
-
-                                        <div class="month-calendar form-control">
-                                            <input type="text" value="mm/dd/yyyy"/>
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                        <select class="form-control">
-                                            <option selected="selected" value="0">9:00</option>
-                                            <option value="-1">10:00</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-group">
-                                        <select class="form-control">
-                                            <option selected="selected" value="0">UTC</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="input-group"><label data-toggle="tooltip"
-                                                                        title="Afghanistan"
-                                                                        class="overflow-ellipsis form-control-label">
-                                            <span>Unlock date</span>
-                                        </label>
-                                        </div>
-                                        <div class="input-group"><select class="PriceTier form-control">
+                                    <div class="col-md-20">
+                                        <div class="input-group"><select class="form-control">
                                             <option selected="selected" value="-1">On this date</option>
                                         </select></div>
                                         <div class="input-group">
@@ -240,91 +184,183 @@
                                                 <option selected="selected" value="0">UTC</option>
                                             </select>
                                         </div>
-
                                     </div>
-
                                 </div>
-                                <div class="btn-group"><a class="btn btn-primary">Add market override</a></div>
+                                <div class="form-group form-inline row">
+                                    <label class="col-md-4 col-sm-24">
+                                        <span>Pre-order end</span>
+                                    </label>
+                                    <div class="col-md-20">
+                                        <div class="input-group"><select class="form-control">
+                                            <option selected="selected" value="-1">On this date</option>
+                                        </select></div>
+                                        <div class="input-group">
+
+                                            <div class="month-calendar form-control">
+                                                <input type="text" value="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">9:00</option>
+                                                <option value="-1">10:00</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">UTC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-inline row">
+                                    <label class="col-md-4 col-sm-24">
+                                        <span>Unlock date</span>
+                                    </label>
+                                    <div class="col-md-20">
+                                        <div class="input-group"><select class="form-control">
+                                            <option selected="selected" value="-1">On this date</option>
+                                        </select></div>
+                                        <div class="input-group">
+
+                                            <div class="month-calendar form-control">
+                                                <input type="text" value="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">9:00</option>
+                                                <option value="-1">10:00</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="form-control">
+                                                <option selected="selected" value="0">UTC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="btn-group"><a class="btn btn-primary">Add market override</a></div>
 
                         </div>
+                    </section>
+
+                    <section class="section has-header-action">
+                        <header class="section-header">
+                            <div class="header-titles">
+                                <div class="titles-outer">
+                                    <div class="titles-inner">
+                                        <h5 class="section-title text-maxlines-1">Pricing</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-action">
+                                <a tabindex="0" class="expandLink collapsed" data-target="#idCustomMarket"
+                                   intro-target="#marketIntro" data-command="toggleVisible">Hide options</a>
+                            </div>
+                        </header>
+                        <div class="section-body">
+                            <div class="controls">
+                                <div class="form-group">
+                                    <label>
+                                        <span>Price Tier</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option selected="selected" value="-1">1.99 USD</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label>
+                                        <span>Duration</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option selected="selected" value="-1">7 days</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label>
+                                        <span>Free trial</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option selected="selected" value="-1">No free trial</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                    <section class="section has-header-action">
+                        <header class="section-header">
+                            <div class="header-titles">
+                                <div class="titles-outer">
+                                    <div class="titles-inner">
+                                        <h5 class="section-title text-maxlines-1">Trial</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-action">
+                                <a tabindex="0" class="expandLink collapsed" data-target="#idCustomMarket"
+                                   intro-target="#marketIntro" data-command="toggleVisible">Hide options</a>
+                            </div>
+                        </header>
+                        <div class="section-body">
+                            <p>This app is not available for trial</p>
+                        </div>
+                    </section>
+                    <section class="section has-header-action">
+                        <header class="section-header">
+                            <div class="header-titles">
+                                <div class="titles-outer">
+                                    <div class="titles-inner">
+                                        <h5 class="section-title text-maxlines-1">Promotions</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-action">
+                                <a tabindex="0" class="expandLink collapsed" data-target="#idCustomMarket"
+                                   intro-target="#marketIntro" data-command="toggleVisible">Hide options</a>
+                            </div>
+                        </header>
+                        <div class="section-body">
+                            <p>No promotions configured.</p>
+                        </div>
+                    </section>
+                    <section class="section has-header-action">
+                        <header class="section-header">
+                            <div class="header-titles">
+                                <div class="titles-outer">
+                                    <div class="titles-inner">
+                                        <h5 class="section-title text-maxlines-1">Organizational licensing</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-action">
+                                <a tabindex="0" class="expandLink collapsed" data-target="#idCustomMarket"
+                                   intro-target="#marketIntro" data-command="toggleVisible">Hide options</a>
+                            </div>
+                        </header>
+                        <div class="section-body">
+                            <p>Not configured.</p>
+                        </div>
+                    </section>
+                    <div class="page-bottom-buttons">
+
+                        <div class="btn-group">
+                            <button class="btn btn-primary" type="button">Save</button>
+                        </div>
+                    </div>
+                </section>
+            </form>
         </div>
-        </section>
-        <section class="section">
-            <div class="section-body">
-                <section class="section has-header-action">
-                    <header class="section-header">
-                        <div class="header-titles">
-                            <div class="titles-outer">
-                                <div class="titles-inner">
-                                    <h5 class="section-title text-maxlines-1">Pricing</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-action">
-                            <a tabindex="0" class="expandLink collapsed" data-target="#idCustomMarket"
-                               intro-target="#marketIntro" data-command="toggleVisible">Hide options</a>
-                        </div>
-                    </header>
-                    <div class="section-body custom-market-price-scope">
-                        <div class="controlContainer spacer-16-top"></div>
-                        <div class="market col-md-24 remove-padding">
-                            <div class="form-group ">
-                                <div class="input-group"><label data-toggle="tooltip"
-                                                                title="Afghanistan"
-                                                                class="overflow-ellipsis form-control-label">
-                                    <span>Price tier</span>
-                                </label>
-                                </div>
-                                <div class="input-group"><select class="PriceTier form-control">
-                                    <option selected="selected" value="-1">As soon as possible</option>
-                                </select></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-body custom-market-price-scope">
-                        <div class="controlContainer spacer-16-top"></div>
-                        <div class="market col-md-24 remove-padding">
-                            <div class="form-group ">
-                                <div class="input-group"><label data-toggle="tooltip"
-                                                                title="Afghanistan"
-                                                                class="overflow-ellipsis form-control-label">
-                                    <span>Duration</span>
-                                </label>
-                                </div>
-                                <div class="input-group"><select class="PriceTier form-control">
-                                    <option selected="selected" value="-1">7 days</option>
-                                </select></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-body custom-market-price-scope">
-                        <div class="controlContainer spacer-16-top"></div>
-                        <div class="market col-md-24 remove-padding">
-                            <div class="form-group ">
-                                <div class="input-group"><label data-toggle="tooltip"
-                                                                title="Afghanistan"
-                                                                class="overflow-ellipsis form-control-label">
-                                    <span>Free trial</span>
-                                </label>
-                                </div>
-                                <div class="input-group"><select class="PriceTier form-control">
-                                    <option selected="selected" value="-1">No free trial</option>
-                                </select></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-                <section class="section">
-                    <div class="btn-group">
-                        <button class="btn-primary">Save</button>
-                    </div>
-                </section>
-            </div>
-        </section>
-        </form>
     </div>
-</div>
 </div>
 
 <script type="text/javascript">

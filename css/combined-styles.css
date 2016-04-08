@@ -1,0 +1,219 @@
+
+.clear { clear: both; }
+[class^="icon-dc"] { font-family: "DevCenter Icon"; }
+.icon-dc-IncidentTriangle::before { content: ""; }
+.icon-dc-StatusErrorFull::before { content: ""; }
+.win-icon { font-family: "Dev Center MDL2 Assets"; }
+html, body { height: 100%; }
+body { margin: 0px; }
+.disabled.btn, [disabled].btn, button.disabled, button[disabled], fieldset[disabled] .btn, fieldset[disabled] button, fieldset[disabled] input[type="button"], fieldset[disabled] input[type="reset"], fieldset[disabled] input[type="submit"], input[type="button"].disabled, input[type="button"][disabled], input[type="reset"].disabled, input[type="reset"][disabled], input[type="submit"].disabled, input[type="submit"][disabled], input[type="text"][disabled], input[disabled], select[disabled], fieldset[disabled], textarea[disabled], button[disabled], input[type="button"][disabled] { color: rgba(0, 0, 0, 0.6) !important; cursor: not-allowed !important; }
+#contentWrapper, #contentWrapper.container { padding-bottom: 160px; margin: 0px auto; box-sizing: border-box; min-height: calc(100% - 110px); }
+.dashboard #contentWrapper, #contentWrapper.container { padding-bottom: 20px; }
+.clear { clear: both; }
+.shell-footer h4 { line-height: 1.1rem; }
+#firstRun .modal-body { overflow: auto; max-height: 220px; }
+#firstRun.modal .btn { width: auto; }
+.icon-win-Notification::before { font-family: SegoeMDL2; content: ""; display: inline-block; }
+#feedbackDialog.modal { position: absolute; overflow: visible; }
+#feedbackDialog.modal .modal-dialog { z-index: 1040; }
+.overlay { position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 1039; background-color: rgba(255, 255, 255, 0.74902); }
+#feedbackEntry { position: fixed; bottom: 0px; right: 20px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(153, 153, 153); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(153, 153, 153); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(153, 153, 153); color: rgb(51, 102, 187); cursor: pointer; padding: 0px 10px 2px; line-height: 22px; text-align: center; font-size: 14px; background-color: rgb(242, 242, 242); }
+#feedbackEntry:focus { border-top-color: rgb(51, 102, 187); border-left-color: rgb(51, 102, 187); border-right-color: rgb(51, 102, 187); }
+.icon-win-TypedNoteFill::before { font-family: BrowserAssets; content: ""; display: inline-block; padding-right: 10px; position: relative; top: 3px; }
+#feedbackDialog h2, #npsFeedback h2 { color: rgb(0, 120, 215); margin-bottom: 12px; }
+#feedbackDialog .radio { display: inline-block; margin-right: 1em; }
+#feedbackDialog .form-group { margin-top: 24px; }
+#npsFeedback .radio { width: 20%; margin-top: 5px; margin-bottom: 0px; text-align: center; }
+#npsFeedback .radio label span::before { left: calc(50% - 18px); }
+#npsFeedback .ratingLabel { font-size: 12px; color: rgb(137, 137, 137); text-align: center; }
+#serviceOutage .alert { margin: 0px auto; padding: 12px 0px; min-height: auto; line-height: normal; }
+#serviceOutage .alert.alert-warning { color: rgb(0, 0, 0); }
+#serviceOutage .win-icon-IncidentTriangle { position: relative; top: 2px; color: rgb(197, 5, 0); vertical-align: top; margin-right: 1em; }
+#serviceOutage td { padding-bottom: 10px; }
+#serviceOutage tr:last-child td { padding: 0px; }
+#headerWrapper, #footerWrapper { line-height: 0px; }
+.shell-header-wrapper, .shell-footer-wrapper, .shell-category-nav { max-width: 1440px !important; }
+.container { max-width: 1440px !important; }
+#gleam { position: absolute; top: -72px; left: calc(50% + 648px); z-index: 1002; }
+#notificationEntry { cursor: pointer; display: block; position: relative; height: 72px; width: 72px; text-align: center; color: rgb(255, 255, 255); border-top-width: 1px; border-top-style: solid; border-top-color: transparent; border-left-width: 1px; border-left-style: solid; border-left-color: transparent; border-right-width: 1px; border-right-style: solid; border-right-color: transparent; }
+#notificationEntry:focus { background-color: rgb(0, 108, 193); }
+#notificationEntry:hover { background-color: rgb(0, 108, 193); }
+#notificationEntry.opened { color: rgb(0, 121, 212); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+#notificationIcon { -webkit-user-select: none; }
+#notificationIcon .hasNotifications { color: rgb(255, 255, 255); border-radius: 50%; height: 17px; width: 17px; position: absolute; top: 15px; right: 17px; font-size: 11px; background-color: rgb(197, 5, 0); }
+.hasNotifications span { position: relative; top: 8px; height: 17px; width: 17px; text-align: center; }
+#notificationIcon span.icon-win-Notification, #notificationIcon span.icon-win-NotificationActive { display: block; text-align: center; font-size: 16px; padding-top: 35px; }
+.notificationList { position: absolute; top: 100%; right: 0px; width: 470px; margin: 0px; color: rgb(0, 0, 0); line-height: 1.5em; display: none; border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: rgb(0, 121, 212); background-color: rgb(255, 255, 255); }
+.notificationList a, ul.notificationList a:link, ul.notificationList a { color: rgb(0, 0, 0); display: block; padding: 20px 60px 20px 8px; }
+.notificationList .notificationHead { border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); color: rgb(0, 121, 212); padding: 8px 20px; }
+.notificationList .notificationHead a:hover { text-decoration: underline; }
+.notificationRemove { position: absolute; top: 0px; left: 0px; color: rgb(0, 0, 0); padding: 10px 20px; text-align: center; width: 100%; height: 100%; cursor: default; background-color: rgb(255, 255, 255); }
+.notificationRemove .notificationFeedback { margin: 0px auto; }
+.notificationRemove a { padding: 0px 20px 0px 0px; display: inline-block; color: rgb(0, 121, 212); cursor: pointer; }
+.notificationRemove .notificationThanks { animation: notificationThanks 0.5s 1s 1 forwards; }
+.notificationList ul { margin: 0px; padding: 0px; overflow: auto; }
+.notificationList li:last-child { border-bottom-style: none; }
+li.singleNotification { position: relative; display: table; width: 100%; margin: 0px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); }
+li.singleNotification a:focus .notificationMessage { outline: dotted 1px; }
+li.singleNotification.unread { background-color: rgb(242, 242, 242); }
+li.singleNotification .notificationType { display: table-cell; vertical-align: middle; width: 40px; font-size: 24px; }
+li.singleNotification .notificationType .win-icon-Warning { color: rgb(197, 5, 0); }
+li.singleNotification .notificationType .win-icon-Flag { color: rgb(248, 78, 41); }
+li.singleNotification .notificationType .win-icon-Info { color: rgb(48, 118, 188); }
+li.singleNotification .notificationMessage { display: table-cell; vertical-align: middle; }
+li.singleNotification .notificationDismissal { position: absolute; top: calc(50% - 10px); right: 20px; width: 40px; text-align: right; font-size: 20px; cursor: pointer; }
+li.singleNotification .notificationDismissal a { padding: 0px; }
+li.singleNotification:hover .notificationDismissal a { text-decoration: none; }
+li.singleNotification:hover { color: rgb(255, 255, 255); background-color: rgb(0, 121, 212); }
+li.singleNotification:hover a { color: rgb(255, 255, 255); }
+li.singleNotification:hover .notificationRemove a { color: rgb(0, 121, 212); text-decoration: none; }
+li.singleNotification:hover .notificationRemove a:hover { text-decoration: underline; }
+li.singleNotification:hover .notificationType .win-icon-Warning { color: rgb(255, 255, 255); }
+li.singleNotification:hover .notificationType .win-icon-Flag { color: rgb(255, 255, 255); }
+li.singleNotification:hover .notificationType .win-icon-Info { color: rgb(255, 255, 255); }
+.section.item-section, .dashboard .section.item-section { margin-bottom: 39px; }
+.section.item-section .section-header, .dashboard .section.item-section .section-header { margin-bottom: 16px; border-style: none; padding-bottom: 0px; }
+.section.item-section .section-title, .dashboard .section.item-section .section-title { color: rgb(0, 0, 0); }
+.dashboard .page-title-header .page-title { font-weight: 300; }
+.shell-category-header .shell-category-nav .shell-category-nav-featured { padding-right: 77px; background-color: rgb(0, 120, 215); }
+a { cursor: pointer; }
+div:focus, span:focus { outline: 1px; }
+.alert.has-icon .alert-string { color: rgb(0, 0, 0); }
+.alert.alert-warning { color: rgb(255, 185, 0); }
+.alert.has-icon { display: table; }
+.alert .alert-icon, .alert .alert-string { display: table-cell; }
+.alert .alert-icon { padding-right: 5px; }
+.alert:not(.has-icon) a { color: inherit; text-decoration: underline; }
+.link { color: rgb(0, 108, 216); cursor: pointer; }
+.link:hover { color: rgb(102, 102, 102); }
+.horizontal-link-group .horizontal-link.hidden:first-child + .horizontal-link { padding-left: 0px; margin-left: 0px; border-left-style: none; }
+button.link { border: 0px; padding: 0px; margin: 0px; display: inline; position: static; min-width: auto; outline: none; vertical-align: baseline; overflow: auto; background: none !important; }
+button.link:focus, .focusable:focus { outline: -webkit-focus-ring-color auto 5px; }
+.reduced-string-length { max-width: 66%; }
+.all-apps-section .header-action { vertical-align: bottom; }
+.section .header-action { font-size: 0.93rem; }
+.cert-status-table .page-bottom-buttons { margin-top: 48px; }
+a { color: rgb(0, 108, 216); }
+.section .item-section { margin-right: 20px; }
+.table th { color: rgb(101, 101, 101); }
+.table .sortable.active::after { content: ""; }
+.table .sortable.active.descending::after { content: ""; }
+.table .sortable.active.ascending::after { content: ""; }
+.table a.sortable, .table .sortable a { color: inherit; }
+.section.remove-header-rule .section-header { margin-bottom: 10px; }
+.section-header .btn.btn-primary { min-width: 160px; }
+.table .media-icon { margin-top: 0px; }
+.radio.has-inputs input[type="radio"], .radio.has-inputs label span::before { top: 5px; }
+.radio.has-inputs label span:nth-of-type(1n+2)::before { display: none; }
+.form-group.form-group-tall { margin-bottom: 20px; }
+div[class^="col-"] .checkbox label.overflow-ellipsis { padding-right: 28px; }
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus { z-index: 2; color: rgb(255, 255, 255); border-color: rgb(66, 139, 202); cursor: default; }
+.pagination .active a, .pagination .active a:hover, .pagination .active a:focus, .pagination .active span, .pagination .active span:hover, .pagination .active span:focus { font-weight: 400; background-color: rgb(0, 110, 204); }
+.pagination-gallery .section-header { margin-bottom: 0px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(200, 200, 200); }
+.pagination-gallery .section-body nav { display: table-cell; }
+.pagination-gallery .section-body nav .pagination.gallery-list { display: table; table-layout: fixed; width: 100%; }
+.form-inline .month-calendar { display: inline-block; vertical-align: bottom; width: auto; margin-right: 6px; }
+select:hover { border-color: rgb(101, 101, 101); }
+.input-bottom-comment { margin-top: 8px; display: block; }
+.control.selection div textarea { margin-left: -28px; }
+.control.selection div input[type="radio"], .control.selection div input[type="checkbox"] { margin-left: -28px; position: absolute; }
+.selection.control { padding-left: 28px; padding-top: 10px; padding-bottom: 10px; clear: both; }
+div.selection div, div.selection label { float: left; }
+.form-group input[type="text"] + input[type="text"] { margin-left: 8px; }
+.form-group-title { font-size: 15px; margin-bottom: 12px; display: block; }
+.form-group-tall { margin-bottom: 20px; }
+.form-group.dropdown-min-width select { min-width: 33%; }
+.form-group-addon.form-group-addon-adjacent > input, .form-group-addon.form-group-addon-adjacent > select, .form-group-addon.form-group-addon-adjacent .form-group { margin: 0px 20px; }
+.form-group-addon.form-group-addon-adjacent .form-group { display: inline-block; }
+.form-group-addon.form-group-addon-adjacent input:first-child, .form-group-addon.form-group-addon-adjacent select:first-child, .form-group-addon.form-group-addon-adjacent input:last-child, .form-group-addon.form-group-addon-adjacent select:last-child, .form-group-addon.form-group-addon-adjacent .form-group:first-child, .form-group-addon.form-group-addon-adjacent .form-group:last-child { margin-left: 0px; }
+.form-group-addon.form-group-addon-adjacent input:last-child, .form-group-addon.form-group-addon-adjacent select:last-child, .form-group-addon.form-group-addon-adjacent .form-group:last-child { margin-right: 0px; }
+.control.selection .labels + .date-time.labels { padding-left: 10px; }
+.control.selection > div + .labels { display: inline-block; }
+.control .labels #publishdatepicker { padding-right: 10px; }
+.control.selection .labels > .hasDatepicker + span { padding-left: 6px; }
+.control.selection .labels > .hasDatepicker { padding-left: 6px; }
+.control.selection #Hour { margin-right: 6px; }
+.control.has-inputs { position: relative; }
+.btn-group .checkmark-icon::after { margin: 0px 16px; line-height: 40px; }
+textarea { resize: none; }
+.input-two-col.row { margin-bottom: 20px; margin-left: -4px; margin-right: -4px; }
+.input-two-col.row .col-xs-12 { padding-left: 4px; padding-right: 4px; }
+.custom-market-price-scope .selection.control { padding-left: 0px; padding-right: 0px; }
+.market-input { display: table; table-layout: fixed; width: 100%; height: 50px; margin-top: 0px; }
+.market-input .market-input-checkbox { display: table-cell; vertical-align: middle; margin-top: 0px !important; }
+.market-input label.overflow-ellipsis { padding-right: 8px; display: block; }
+.market-input .market-input-checkbox, .market-input .market-input-label, .market-input .market-input-message, .market-input .market-input-control { display: table-cell; vertical-align: middle; }
+.market-input .market-input-message { width: 60%; text-align: left; white-space: nowrap; }
+.market-input .market-input-control { width: 60%; text-align: right; }
+.market-input .market-input-control select { width: 100%; }
+.market-input .month-calendar::after { top: 16px; }
+.market-input.multi .market-input-message { width: 80%; padding-left: 8px; }
+.market-input.multi .market-input-control { width: 20%; padding-left: 8px; }
+.global-checkbox-controls .global-checkbox-control.float-left + .float-left { margin: 0px 20px; }
+#app-sales-table-body input { background-color: white; }
+#app-sales-table { table-layout: fixed; }
+#app-sales-table th.col-sale-error { width: 3%; }
+#app-sales-table th.col-sale-name { width: 20%; }
+#app-sales-table th.col-sale-start, #app-sales-table th.col-sale-end { width: 22.5%; }
+#app-sales-table th.col-sale-price { width: 15%; }
+#app-sales-table th.col-sale-action, #app-sales-table th.col-sale-markets { width: 10%; }
+.form-group.sale-date-inputs .month-calendar input, .form-group.sale-date-inputs .month-calendar { width: 100%; }
+input[type="search"].form-control { border-right-width: 0px; box-shadow: 0px 0px 0px; border-color: rgb(204, 204, 204); min-width: 230px; }
+.template-search .input-group-addon button .win-icon { color: gray; }
+input[type="search"], input[type="search"]:focus, input[type="search"]:hover { border-color: rgb(204, 204, 204); }
+input[type="search"], input[type="search"]:focus, input[type="search"]:hover { border-color: rgb(204, 204, 204); }
+.page-title-header p { margin-bottom: 20px; }
+.page-title-header.has-header-action .title-outer { display: table-cell; padding-right: 10px; }
+.page-title-header.has-header-action .title-inner { display: table; table-layout: fixed; width: 100%; }
+.page-title-header.has-header-action .header-action { display: table-cell; white-space: nowrap; }
+.page-title + .header-info { margin-top: 16px; max-width: 75%; }
+.section-header.has-controls .btn-primary { min-width: 160px; }
+.section-header.has-controls .btn-group, .section-header.has-controls .form-group { margin: 0px; }
+.task-status-table .alert { margin: 0px; }
+.language-list-container .checkbox { margin-top: 0px; }
+.page-bottom-buttons { margin-top: 84px; }
+.page-bottom-buttons .btn-group, .page-bottom-buttons.btn-group { margin-bottom: 0px; }
+.modal.loading .modal-dialog { width: 300px; text-align: center; }
+.modal :only-child.btn { float: left; }
+.modal-content .btn-group { margin-bottom: 0px; }
+.btn-group .progress-ring { display: inline-block; margin-top: 8px; margin-left: 16px; }
+.overflow-ellipsis { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.hidden, [type="hidden"] { display: none; }
+.remove-padding { padding: 0px; }
+.full-width { width: 100%; }
+.float-left { float: left; }
+.float-right { float: right; }
+.expandLink { margin-left: 5px; cursor: pointer; }
+#pageMainContent { background-color: rgb(255, 255, 255); }
+.leftMenu { word-wrap: break-word; word-break: break-word; padding-top: 77px; }
+.dashboard .leftMenu.col-xs-6 { padding-top: 32px; }
+.dashboard .leftMenu.noApp.col-xs-6 { padding-top: 39px; }
+.noLeftNav .devcenter-nav ul { border-bottom-style: none; margin-bottom: 0px; padding-bottom: 0px; }
+#appInfoDesktop { display: block; }
+#appInfoMobile { display: none; }
+#appInfoMobile:focus .navAppName span { outline: dotted 1px; }
+.navApp { display: table; margin-bottom: 32px; }
+.navApp .navAppIcon { height: 60px; width: 60px; display: inline-block; margin-right: 1em; word-wrap: break-word; background-color: rgb(211, 213, 214); }
+.navApp .navAppIcon.hasIcon { background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAH0lEQVQYlWPYtGnTf3R86NAhDMwwFBRiE8SmeSgoBAA3kj2k/B3URwAAAABJRU5ErkJggg==") repeat; }
+.navApp .navAppIcon img { height: 60px; width: 60px; }
+.navApp .navAppName { display: table-cell; vertical-align: middle; font-size: 20px; color: rgb(0, 0, 0); width: 100%; }
+.dashboard .navApp .navAppName { vertical-align: top; }
+.navApp .navAppName span { position: relative; display: inline-block; line-height: normal; min-height: 1em; max-height: 2.8em; overflow: hidden; width: 100%; }
+.navApp .chevron { display: none; }
+.devcenter-nav ul { padding: 0px 0px 20px; margin: 0px 0px 32px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(208, 210, 211); }
+.devcenter-nav li { list-style-type: none; margin-top: 20px; word-wrap: break-word; word-break: normal; }
+.devcenter-nav > ul > li:first-child { margin-top: 0px; padding-top: 0px; }
+.devcenter-nav li a div { display: inline-block; }
+.devcenter-nav a.active, .devcenter-nav a.active:link, .devcenter-nav a.active:visited { color: rgb(0, 0, 0); }
+.devcenter-nav a, .devcenter-nav a:link, .devcenter-nav a:visited { color: rgb(101, 101, 101); text-decoration: none; }
+.devcenter-nav a.active:hover, .devcenter-nav a:hover { opacity: 0.6; }
+.devcenter-nav a.active:active, .devcenter-nav a:active { opacity: 0.4; }
+.devcenter-nav ul li > ul { border-bottom-style: none; padding: 0px; margin: 0px; }
+.devcenter-nav ul li > ul li { margin-top: 12px; margin-bottom: 0px; margin-left: 1em; }
+.noBackLink a.devcenter-nav-backlink { display: none; }
+code { white-space: pre; }
+.clear { clear: both; }
+.devcenter-nav .win-icon { vertical-align: baseline; }
+.icon-win-ChevronDown::before { font-family: BrowserAssets; content: ""; position: relative; top: 3px; font-size: 0.9em; }
+.icon-win-Back::before { font-family: BrowserAssets; content: ""; display: inline-block; position: relative; top: 2px; font-size: 0.9em; padding-right: 5px; }
+.leftMenu a .icon-win-Back { display: inline-block; word-break: normal; }
