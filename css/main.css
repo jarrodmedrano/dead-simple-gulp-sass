@@ -1,5 +1,6 @@
+.form-group .month-calendar {
+  margin-right: 0; }
+
 @media screen and (max-width: 540px) {
-  .input-group {
-    width: 100%; }
-    .input-group .month-calendar {
-      width: 100%; } }
+  .form-group .month-calendar {
+    width: 100%; } }
