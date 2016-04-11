@@ -1,4 +1,4 @@
-.form-group {
+.form-inline .form-group {
   .month-calendar {
     margin-right: 0;
   }
@@ -7,5 +7,25 @@
       width: 100%;
     }
   }
+
+  //@media screen and (max-width: 640px) {
+  //  clear: both;
+  //  display: block;
+  //  max-width: 100%;
+  //
+  //  .form-control {
+  //    width: 100%;
+  //  }
+  //}
 }
 
+@media screen and (min-width: 540px) {
+  label {
+    &.form-group {
+      span {
+        padding-top: 5px;
+        display: block;
+      }
+    }
+  }
+}
