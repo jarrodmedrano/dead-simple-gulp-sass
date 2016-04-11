@@ -8,24 +8,13 @@
     }
   }
 
-  //@media screen and (max-width: 640px) {
-  //  clear: both;
-  //  display: block;
-  //  max-width: 100%;
-  //
-  //  .form-control {
-  //    width: 100%;
-  //  }
-  //}
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 768px) {
   label {
     &.form-group {
-      span {
         padding-top: 5px;
         display: block;
-      }
     }
   }
 }

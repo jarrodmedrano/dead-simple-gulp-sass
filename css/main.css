@@ -5,7 +5,7 @@
   .form-inline .form-group .month-calendar {
     width: 100%; } }
 
-@media screen and (min-width: 540px) {
-  label.form-group span {
+@media screen and (min-width: 768px) {
+  label.form-group {
     padding-top: 5px;
     display: block; } }
