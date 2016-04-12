@@ -8,6 +8,13 @@
     }
   }
 
+  @media screen and (min-width: 540px) {
+    .month-calendar {
+      width: 136px;
+    }
+
+  }
+
 }
 
 @media screen and (min-width: 768px) {
