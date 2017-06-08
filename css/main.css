@@ -1,15 +1,2 @@
-.form-inline .form-group .month-calendar {
-  margin-right: 0; }
-
-@media screen and (max-width: 540px) {
-  .form-inline .form-group .month-calendar {
-    width: 100%; } }
-
-@media screen and (min-width: 540px) {
-  .form-inline .form-group .month-calendar {
-    width: 136px; } }
-
-@media screen and (min-width: 768px) {
-  label.form-group {
-    padding-top: 5px;
-    display: block; } }
+h1 {
+  color: red; }

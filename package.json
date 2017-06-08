@@ -1,17 +1,26 @@
 {
-  "name": "dead simple gulp sass",
+  "name": "dead-simple-gulp-sass",
   "version": "1.0.0",
-  "description": "Very simple gulp-sass setup",
+  "description": "Very simple gulp sass setup",
   "main": "gulpfile.js",
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "^2.11.2",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "v-jamedr",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarrodmedrano/dead-simple-gulp-sass.git"
+  },
+  "author": "Jarrod Medrano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jarrodmedrano/dead-simple-gulp-sass/issues"
+  },
+  "homepage": "https://github.com/jarrodmedrano/dead-simple-gulp-sass#readme"
 }
